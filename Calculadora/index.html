@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <table>
+        <td></td>
+        <th>Loan Balance, Cumulative Equity, and Interest Payments</th>
+        <tr>
+            <th>Enter loan Data:</th>
+        </tr>
+        <tr>
+            <td>Amount of the loan(#):</td>
+            <td><input id="amount"></td>
+            <td rowspan="8">
+                <canvas id="graph" width="400" height="250" ></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td>Annual interest (%):</td>
+            <td><input id="apr"></td>
+        </tr>
+        <tr>
+            <td>Repayment period (years):</td>
+        <td>
+            <input id="years">
+        </td>
+        <tr>
+            <td>Zipcode (to find lenders):</td>
+        <td>
+            <input id="zipcode">
+        </td>
+        <tr>
+            <th>Approximate Payments:</th>
+        <td>
+            <button>Calculate</button>
+        </td>
+        </tr>
+        <tr>
+            <td>Monthly payment:</td>
+            <td>$<span class="output" id="payment"></span></td>
+        </tr>
+        <tr>
+            <td>Total payment:</td>
+            <td>$<span class="output" id="total"></span></td>
+        </tr>
+        <tr>
+            <td>Total Interest:</td>
+            <td>$<span class="ontput" id="totalinterest"></span></td>
+        </tr>
+        <tr>
+            <th>Sponsors:</th> 
+                <td colspan=2> 
+                    Apply for your loan with one of these fine lenders:
+                    <div id="lenders"></div>
+                </td>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>
