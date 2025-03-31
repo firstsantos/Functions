@@ -4,39 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script src="scripto.js"></script>    
+    <style>
+         .output {
+            font-weight: bold;
+         }
+
+         #payment {
+            text-decoration: underline;
+         }
+
+         #graph {
+            border: solid black 1px;
+         }
+         
+         td, th {
+            vertical-align: top;
+         }
+    </style>
 </head>
 <body>
     <table>
-        <td></td>
-        <th>Loan Balance, Cumulative Equity, and Interest Payments</th>
         <tr>
             <th>Enter loan Data:</th>
         </tr>
+        <td></td>
+        <th>Loan Balance, Cumulative Equity, and Interest Payments</th>
         <tr>
             <td>Amount of the loan(#):</td>
-            <td><input id="amount"></td>
+            <td><input id="amount" onchange="calculator();"></td>
             <td rowspan="8">
-                <canvas id="graph" width="400" height="250" ></canvas>
+                <canvas id="graph" width="400" height="250"></canvas>
             </td>
         </tr>
         <tr>
             <td>Annual interest (%):</td>
-            <td><input id="apr"></td>
+            <td><input id="apr" onchange="calculator();"></td>
         </tr>
         <tr>
             <td>Repayment period (years):</td>
         <td>
-            <input id="years">
+            <input id="years" onchange="calculator();">
         </td>
         <tr>
             <td>Zipcode (to find lenders):</td>
         <td>
-            <input id="zipcode">
+            <input id="zipcode" onchange="calculator();">
         </td>
         <tr>
             <th>Approximate Payments:</th>
         <td>
-            <button>Calculate</button>
+            <button onClick="calculator();">calculator</button>
         </td>
         </tr>
         <tr>
@@ -49,7 +67,7 @@
         </tr>
         <tr>
             <td>Total Interest:</td>
-            <td>$<span class="ontput" id="totalinterest"></span></td>
+            <td>$<span class="output" id="totalinterest"></span></td>
         </tr>
         <tr>
             <th>Sponsors:</th> 
